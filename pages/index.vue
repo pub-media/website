@@ -8,64 +8,72 @@
   .container
     .content-blocks
 
-      .content-block.content-block-left
-        .content-block-title media companies
+      .content-block.content-block-left(v-in-viewport.once)
+        .content-block-title
+          .copy media companies
         .content-block-copy
-          p License content from established creators to distribute across your owned and operated properites. 
+          p Acquire content from established creators to distribute across your owned and operated properties. 
           p License out the content you make on a daily basis to other media companies and partners. 
 
-      .content-block.content-block-right
-        .content-block-title creators
+      .content-block.content-block-right(v-in-viewport.once)
+        .content-block-title
+          .copy creators
         .content-block-copy
           p License your content directly to media companies and platforms to know the value of your content and create incremental revenue streams.
-          p Make your content avaialable for turnkey sponsorships from brands. No custom content, no brief - just the content you make on a daily basis.
+          p Make your content available to brands for sponsorship.  No custom content, no brief - just the content you make on a daily basis.
 
-      .content-block.content-block-left
-        .content-block-title brands
+      .content-block.content-block-left(v-in-viewport.once)
+        .content-block-title
+          .copy brands
         .content-block-copy
           p Sponsor content from established creators and brands.
           p Get your message associated with quality content and in front of an engaged audience. 
 
-      .content-block-highlight how pub maximizes the value of content
+      .content-block-highlight(v-in-viewport.once)
+        .copy how pub maximizes the value of content
 
-      .content-block.content-block-dir-col
-        .content-block-icon
-          i.fas.fa-5x.fa-play-circle
+      .content-block.content-block-dir-col(v-in-viewport.once)
+        i.fab.fa-5x.fa-youtube
         .content-block-icon-title video content
         .content-block-icon-copy produced by a creator or media company
 
       .content-block-group
 
-        .content-block.content-block-dir-col
+        .content-block.content-block-dir-col(v-in-viewport.once)
           .content-block-icon
             include ../static/exc-rights.svg
-          .content-block-icon-title non-exclusive rights
-          .content-block-icon-copy content available to license multiple times to media copmanies and platforms
+          .content-block-icon-title non-exclusive
+          .content-block-icon-copy content available to license multiple times to media companies and platforms
 
-        .content-block.content-block-dir-col
+        .content-block.content-block-dir-col(v-in-viewport.once)
           .content-block-icon
             include ../static/non-exc-rights.svg
-          .content-block-icon-title exclusive rights
+          .content-block-icon-title exclusive 
           .content-block-icon-copy content available to license exclusively to one media company or platform
 
-        .content-block.content-block-dir-col
+        .content-block.content-block-dir-col(v-in-viewport.once)
           .content-block-icon
             include ../static/sponsorship.svg
           .content-block-icon-title sponsorship
           .content-block-icon-copy pre-made content available to brands for sponsorship on other platforms
 
 
-    .cta let's work together
+    .cta(v-in-viewport.once)
+      .copy let's work together
+
   .footer COPYRIGHT &copy;2018 | pub media corp
 </template>
 
 <script>
+import inViewportDirective from 'vue-in-viewport-directive'
 export default {
+  directives: { 'in-viewport': inViewportDirective },
 }
 </script>
 
 <style lang="stylus">
 @import '../assets/stylus/includes/*'
+@import '../assets/stylus/viewport.styl'
 
 header
   background-color fountain-blue
@@ -146,9 +154,12 @@ header
   padding 30px 0
   margin 20px 0
 
+i.fab
+  color blue-chill
+
 .content-block-icon
-  width 5em
-  height 5em
+  width 3em
+  height 3em
   color blue-chill
   path, polygon, rect
     fill blue-chill
