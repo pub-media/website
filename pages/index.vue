@@ -23,7 +23,7 @@
       .content-block.content-block-left
         .content-block-title brands
         .content-block-copy
-          p Sponsor content from establlished creators and brands.
+          p Sponsor content from established creators and brands.
           p Get your message associated with quality content and in front of an engaged audience. 
 
       .content-block-highlight how pub maximizes the value of content
@@ -46,7 +46,7 @@
           .content-block-icon
             include ../static/non-exc-rights.svg
           .content-block-icon-title exclusive rights
-          .content-block-icon-copy content available to license multiple times to media copmanies and platforms
+          .content-block-icon-copy content available to license exclusively to one media company or platform
 
         .content-block.content-block-dir-col
           .content-block-icon
@@ -56,8 +56,7 @@
 
 
     .cta let's work together
-  .footer
-    COPYRIGHT &copy;2018 | pub media corp
+  .footer COPYRIGHT &copy;2018 | pub media corp
 </template>
 
 <script>
@@ -73,6 +72,7 @@ header
   padding 60px
   color white
   .logo
+    margin auto
     width 200px
     height 100px
     margin auto
@@ -192,4 +192,5 @@ header
   color white
   text-align center
 
+@import '../assets/stylus/mobile.styl'
 </style>
