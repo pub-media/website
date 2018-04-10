@@ -11,15 +11,20 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'shortcut icon', href: '/icons/favicon.ico' },
-      { rel: 'apple-touch-icon', sizes: '180x180', href: '/icons/apple-touch-icon.png' },
-      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icons/favicon-32x32.png' },
-      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icons/favicon-16x16.png' },
-      { rel: 'manifest', href: '/icons/manifest.json' },
-      { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#00c2c9' },
+      { rel: 'shortcut icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'manifest', href: '/manifest.json' },
+      { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#00c2c9' },
 
       { rel: 'stylesheet', href: '//use.fontawesome.com/releases/v5.0.6/css/all.css' },
-    ]
+    ],
+    script: [
+      { src: "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js" },
+      // { src: "https://cdnjs.cloudflare.com/ajax/libs/tippy.js/2.5.0/tippy.min.js" },
+      { src: "https://unpkg.com/tippy.js@2.5.0/dist/tippy.all.min.js", },
+    ],
   },
   /*
   ** Customize the progress bar color

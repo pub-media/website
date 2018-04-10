@@ -13,7 +13,7 @@
           .copy media companies
         .content-block-copy
           p Acquire content from established creators to distribute across your owned and operated properties. 
-          p License out the content you make on a daily basis to other media companies and partners. 
+          p License out the content you make on a daily basis to other media companies and platforms. 
 
       .content-block.content-block-right(v-in-viewport.once)
         .content-block-title
@@ -26,7 +26,7 @@
         .content-block-title
           .copy brands
         .content-block-copy
-          p Sponsor content from established creators and brands.
+          p Sponsor content from established creators and media companies.
           p Get your message associated with quality content and in front of an engaged audience. 
 
       .content-block-highlight(v-in-viewport.once)
@@ -58,8 +58,11 @@
           .content-block-icon-copy pre-made content available to brands for sponsorship on other platforms
 
 
-    .cta(v-in-viewport.once)
+    .cta(v-in-viewport.once,@click="copy",:class="{clicked: cta}",data-clipboard-target="#input")
       .copy let's work together
+      .email
+        input(type="text",value="info@pubmedia.co",title="E-mail copied to clipboard!")#input
+        .clippy(title="Copy to Clipboard",@click="copied"): i.fas.fa-copy
 
   .footer COPYRIGHT &copy;2018 | pub media corp
 </template>
@@ -68,6 +71,31 @@
 import inViewportDirective from 'vue-in-viewport-directive'
 export default {
   directives: { 'in-viewport': inViewportDirective },
+  methods: {
+    copy () {
+      this.cta = true
+      tippy('.clippy')
+      tippy('#input')
+      this.input = document.querySelector('#input')
+      this.input._tippy.disable()
+    },
+    copied () {
+      this.input._tippy.enable()
+      this.input._tippy.show()
+    },
+  },
+  created () {
+    if (process.browser) {
+      this.clipboard = new ClipboardJS('.cta')
+    }
+  },
+  data () {
+    return {
+      input: {},
+      clipboard: {},
+      cta: false,
+    }
+  }
 }
 </script>
 
@@ -187,14 +215,43 @@ i.fab
       margin-right 0px
 
 .cta
-  width 200px
+  width 240px
+  border none
   margin auto
   text-align center
   color white
   marign auto
+  cursor pointer
   background-color maya-blue
   font-h1()
   padding 10px 30px
+  .copy
+    display block
+  .email
+    display none
+  &.clicked
+    .copy
+      display none
+    .email
+      display block
+  .email
+    input
+      display inline-block
+      color maya-blue
+      border 0
+      padding 2px
+      font-h1()
+      text-align center
+      outline none
+    .clippy
+      background-color white
+      font-h1()
+      display inline-block
+      border-left 1px solid maya-blue
+      padding 2px 5px
+      border-radius 0 2px 2px 0
+      i.fas
+        color maya-blue
 
 .footer
   background-color fountain-blue
@@ -204,4 +261,5 @@ i.fab
   text-align center
 
 @import '../assets/stylus/mobile.styl'
+
 </style>
