@@ -62,7 +62,7 @@
       .copy let's work together
       .email
         input(type="text",value="info@pubmedia.co",title="E-mail copied to clipboard!")#input
-        .clippy(title="Copy to Clipboard",@click="copied"): i.fas.fa-copy
+        .clippy(@click="copied"): i.fas.fa-copy
 
   .footer COPYRIGHT &copy;2018 | pub media corp
 </template>
@@ -74,7 +74,6 @@ export default {
   methods: {
     copy () {
       this.cta = true
-      tippy('.clippy')
       tippy('#input')
       this.input = document.querySelector('#input')
       this.input._tippy.disable()
@@ -215,7 +214,7 @@ i.fab
       margin-right 0px
 
 .cta
-  width 240px
+  width 260px
   border none
   margin auto
   text-align center
