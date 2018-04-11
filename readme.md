@@ -7,7 +7,6 @@
 [![CircleCI](https://img.shields.io/circleci/project/github/pub-media/website.svg)](https://circleci.com/gh/pub-media/website/)
 [![aeonian status](https://img.shields.io/badge/%C3%A6onian-deployed-green.svg)](https://github.com/acidjazz/aeonian)
 
-
-
 > Our website
+
 CI Status [![CircleCI](https://circleci.com/gh/pub-media/website/tree/master.svg?style=svg)](https://circleci.com/gh/pub-media/website/tree/master)
