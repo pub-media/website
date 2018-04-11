@@ -15,6 +15,7 @@
     "test": "echo No tests yet"
   },
   "dependencies": {
+    "@nuxtjs/google-analytics": "^2.0.2",
     "aeonian": "^1.0.9",
     "nuxt": "^1.0.0",
     "pug": "^2.0.3",

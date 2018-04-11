@@ -37,6 +37,12 @@ module.exports = {
   css: [
     { src: '~assets/stylus/main.styl', lang: 'stylus' },
   ],
+
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-88836023-2'
+    }]
+  ],
   build: {
     /*
     ** Run ESLint on save
