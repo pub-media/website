@@ -1,4 +1,4 @@
-reuqire('aeonian').config({
+require('aeonian').config({
   bucket: {
     localDir: './dist/',
     prefix: 'website-'
