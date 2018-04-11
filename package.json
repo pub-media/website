@@ -11,10 +11,11 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "production": "yarn cash; yarn generate; node operations/aeonian.js production",
+    "production": "yarn generate; node operations/aeonian.js production",
     "test": "echo No tests yet"
   },
   "dependencies": {
+    "aeonian": "^1.0.9",
     "nuxt": "^1.0.0",
     "pug": "^2.0.3",
     "stylus": "^0.54.5",
