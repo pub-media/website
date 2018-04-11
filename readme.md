@@ -9,4 +9,9 @@
 
 > Our website
 
-CI Status [![CircleCI](https://circleci.com/gh/pub-media/website/tree/master.svg?style=svg)](https://circleci.com/gh/pub-media/website/tree/master)
+
+### Branch Status
+
+master | staging 
+--- | ---
+[![CircleCI](https://circleci.com/gh/pub-media/website/tree/master.svg?style=svg)](https://circleci.com/gh/pub-media/website/tree/master)
